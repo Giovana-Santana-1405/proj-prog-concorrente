@@ -1,2 +1,2 @@
 # proj-prog-concorrente
-Projeto final sobre a criação de um sistema utilizando serialização e paralelismo 
+Projeto de serialização e paralelismo, utilizando dados de acidente de trânsito dos EUA. A base de dados fornece informações sobre todos os acidentes que ocorreram entre 2016 e 2023 em 49 estados. Serão analisados a severidade do acidente e o clima que ele ocorreu, criando uma correlação entre eles para descobrir se o clima afeta diretamente a quantidade e severidade dos acidentes.
