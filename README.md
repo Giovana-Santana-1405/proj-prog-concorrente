@@ -31,5 +31,9 @@ aceleração de etapas de limpeza e transformação dos dados.<br>
 A utilização de concorrência permite reduzir significativamente o tempo de execução das análises, melhorar o aproveitamento dos recursos computacionais e aumentar a escalabilidade do sistema. Dessa forma, o projeto demonstra na prática como técnicas de programação paralela podem ser aplicadas em cenários reais de Big Data e análise de dados urbanos.<br>
 Além do aspecto computacional, o projeto também possui relevância social, pois a análise dos acidentes pode auxiliar estudos sobre segurança no trânsito, impactos climáticos nas rodovias e identificação de áreas críticas para prevenção de acidentes.
 
+## Link para a base de dados 
+https://www.kaggle.com/datasets/sobhanmoosavi/us-accidents?utm_source=chatgpt.com
+
+
 
 
