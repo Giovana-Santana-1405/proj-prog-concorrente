@@ -90,19 +90,21 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 
 # 7. Gráfico de Tempo de Execução
 
- A inserir
+## A inserir
 
 
 # 8. Gráfico de Speedup
 
- A inserir
+## A inserir
 
 # 9. Gráfico de Eficiência
 
- A inserir
+## A inserir
 
 # 10. Análise dos Resultados
 
+## A inserir 
 
 # 11. Conclusão
 
+## A inserir 
