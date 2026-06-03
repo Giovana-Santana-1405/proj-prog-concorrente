@@ -29,6 +29,80 @@ Informar as características do hardware e software utilizados na execução dos
 
 ---
 
+# 3. Metodologia de Testes
+
+Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. Foram realizadas 2 execuções falhas e 2 execuções com sucesso. A primeira execução bem sucedida forneceu um tempo serial de 600.67 segundos (10.01 minutos) Rodando apenas o código no computador. A segunda execução forneceu um tempo de 852.95 segundos (14.22 minutos) rodando em conjunto com 5 guias do google chrome. A entrada utilizada tem 7728394 dados unicos e 3.06GB 
 
 
+## Orientações
+
+
+| Nº Threads/Processos | Tempo de Execução (s) |
+| -------------------- | --------------------- |
+| 1                    |           852.95            |
+| 2                    |           A inserir            |
+| 4                    |               A inserir         |
+| 8                    |            A inserir            |
+| 12                   |           A inserir             |
+
+---
+
+# 5. Cálculo de Speedup e Eficiência
+
+## Fórmulas Utilizadas
+
+### Speedup
+
+```
+Speedup(p) = T(1) / T(p)
+```
+
+Onde:
+
+* **T(1)** = tempo da execução serial
+* **T(p)** = tempo com p threads/processos
+
+### Eficiência
+
+```
+Eficiência(p) = Speedup(p) / p
+```
+
+Onde:
+
+* **p** = número de threads ou processos
+
+---
+
+# 6. Tabela de Resultados
+
+Preencha a tabela abaixo utilizando os tempos medidos.
+
+| Threads/Processos | Tempo (s) | Speedup | Eficiência |
+| ----------------- | --------- | ------- | ---------- |
+| 1                 |     852.95      | 1.0     | 1.0        |
+| 2                 |       A inserir     |         |            |
+| 4                 |       A inserir     |         |            |
+| 8                 |       A inserir     |         |            |
+| 12                |      A inserir      |         |            |
+
+---
+
+# 7. Gráfico de Tempo de Execução
+
+ A inserir
+
+
+# 8. Gráfico de Speedup
+
+ A inserir
+
+# 9. Gráfico de Eficiência
+
+ A inserir
+
+# 10. Análise dos Resultados
+
+
+# 11. Conclusão
 
