@@ -19,10 +19,10 @@ Informar as características do hardware e software utilizados na execução dos
 
 | Item                        | Descrição |
 | --------------------------- | --------- |
-| Processador                 |    Intel Core I5-2400 CPU@ 3.10GHz       |
-| Número de núcleos           |      4     |
-| Memória RAM                 |      16GB     |
-| Sistema Operacional         |     Window 10      |
+| Processador                 |   13th Gen Intel(R) Core(TM) i5-1334U       |
+| Número de núcleos           |      10    |
+| Memória RAM                 |      8GB     |
+| Sistema Operacional         |     Window 11     |
 | Linguagem utilizada         |     Python      |
 | Biblioteca de paralelização |      A inserir     |
 | Compilador / Versão         |      Python 3.14     |
@@ -31,7 +31,16 @@ Informar as características do hardware e software utilizados na execução dos
 
 # 3. Metodologia de Testes
 
-Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. Foram realizadas 2 execuções falhas e 2 execuções com sucesso. A primeira execução bem sucedida forneceu um tempo serial de 600.67 segundos (10.01 minutos) Rodando apenas o código no computador. A segunda execução forneceu um tempo de 852.95 segundos (14.22 minutos) rodando em conjunto com 5 guias do google chrome. A entrada utilizada tem 7728394 dados unicos e 3.06GB 
+Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. Foram realizadas 2 execuções falhas e 2 execuções com sucesso. 
+Teste 1 - <br>
+Tempo: 600.67 segundos (10.01 minutos) <br>
+Aplicações extras abertas: Não <br>
+<br>
+Teste 2 - <br>
+Tempo: 
+Aplicações extras abertas: Spotify, Google Chrome (2 guias)  
+
+
 
 
 ## Orientações
