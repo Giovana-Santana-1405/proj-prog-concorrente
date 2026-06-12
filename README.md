@@ -24,7 +24,7 @@ Informar as características do hardware e software utilizados na execução dos
 | Memória RAM                 |      8GB     |
 | Sistema Operacional         |     Window 11     |
 | Linguagem utilizada         |     Python      |
-| Biblioteca de paralelização |      A inserir     |
+| Biblioteca de paralelização |      concurrent.future    |
 | Compilador / Versão         |      Python 3.14     |
 
 ---
@@ -33,14 +33,37 @@ Informar as características do hardware e software utilizados na execução dos
 
 Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. Foram realizadas 2 execuções falhas e 2 execuções com sucesso. 
 Teste 1 - <br>
-Tempo: 600.67 segundos (10.01 minutos) <br>
+Tempo serial : 600.67 segundos (10.01 minutos) <br>
 Aplicações extras abertas: Não <br>
 <br>
 Teste 2 - <br>
-Tempo: 
-Aplicações extras abertas: Spotify, Google Chrome (2 guias)  
+Tempo serial: 814,21 segundos (13.57 minutos) <br>
+Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
+<br>
+Teste 3 - <br>
+Tempo paralelo (2 Threads): 172.85 segundos (2.88 minutos)  <br>
+Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
+<br>
+Teste 4 - <br>
+Tempo paralelo(4 threads): 165.54 segundos (2.76 minutos) <br>
+Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
+<br>
+ Teste 5 - <br>
+Tempo paralelo(8 threads): 161.50 segundos (2.69 minutos)  <br>
+Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
+<br>
+
+Teste 6 - <br>
+Tempo paralelo(12 threads): 200.88 segundos (3.35 minutos) <br>
+Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
+<br>
+
+Notou-se que o tempo paralelo de 12 threads foi pior que o resto dos tempos paralelos, pois a máquina onde foram realizadas os testes tinham apenas 10 núcleos no processador. Por isso, ocorreu overhead, onde o sistema tenta gerenciar 12 threads, tendo apenas 10 disponíveis. 
 
 
+
+
+Todos os testes, a partir do teste 2, foram executados no mesmo dispositivo, sem alteraçoes no processamento geral. 
 
 
 ## Orientações
@@ -48,11 +71,11 @@ Aplicações extras abertas: Spotify, Google Chrome (2 guias)
 
 | Nº Threads/Processos | Tempo de Execução (s) |
 | -------------------- | --------------------- |
-| 1                    |           852.95            |
-| 2                    |           A inserir            |
-| 4                    |               A inserir         |
-| 8                    |            A inserir            |
-| 12                   |           A inserir             |
+| 1                    |           814.21            |
+| 2                    |           172.85           |
+| 4                    |              165.54         |
+| 8                    |            161.50            |
+| 12                   |           200.88            |
 
 ---
 
@@ -90,10 +113,10 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 | Threads/Processos | Tempo (s) | Speedup | Eficiência |
 | ----------------- | --------- | ------- | ---------- |
 | 1                 |     852.95      | 1.0     | 1.0        |
-| 2                 |       A inserir     |         |            |
-| 4                 |       A inserir     |         |            |
-| 8                 |       A inserir     |         |            |
-| 12                |      A inserir      |         |            |
+| 2                 |       172.85     |         |            |
+| 4                 |       165.54     |         |            |
+| 8                 |       161.50     |         |            |
+| 12                |      200.88      |         |            |
 
 ---
 
