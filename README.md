@@ -31,7 +31,7 @@ Informar as características do hardware e software utilizados na execução dos
 
 # 3. Metodologia de Testes
 
-Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. Foram realizadas 2 execuções falhas e 2 execuções com sucesso. 
+Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. Foram realizadas 2 execuções falhas e 2 execuções com sucesso. <br>
 Teste 1 - <br>
 Tempo serial : 600.67 segundos (10.01 minutos) <br>
 Aplicações extras abertas: Não <br>
@@ -59,6 +59,8 @@ Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
 <br>
 
 Notou-se que o tempo paralelo de 12 threads foi pior que o resto dos tempos paralelos, pois a máquina onde foram realizadas os testes tinham apenas 10 núcleos no processador. Por isso, ocorreu overhead, onde o sistema tenta gerenciar 12 threads, tendo apenas 10 disponíveis. 
+
+Cada execução de paralelismo foi executada uma vez. O tempo serial foi executado duas vezes, levando em consideração o tempo maior. Houve uma diferença de 213,54 segundos entre a primeira e segunda execução. A primeira execução foi mais rápida que a segunda. A diferença foi a máquina utilizada e a quantidade de aplicativos externos abertos. 
 
 
 
@@ -94,6 +96,11 @@ Onde:
 * **T(1)** = tempo da execução serial
 * **T(p)** = tempo com p threads/processos
 
+  Speedup utilizando 2 threads: 4,7<br>
+  Speedup utilizando 4 threads: 4,9<br>
+  Speedup utilizando 8 threads: 5,04<br>
+  Speedup utilizando 12 threads:4,05<br>
+
 ### Eficiência
 
 ```
@@ -112,11 +119,11 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 
 | Threads/Processos | Tempo (s) | Speedup | Eficiência |
 | ----------------- | --------- | ------- | ---------- |
-| 1                 |     852.95      | 1.0     | 1.0        |
-| 2                 |       172.85     |         |            |
-| 4                 |       165.54     |         |            |
-| 8                 |       161.50     |         |            |
-| 12                |      200.88      |         |            |
+| 1                 |     814.21     | 1.0     | 1.0        |
+| 2                 |       172.85     |     4.7    |   2,35         |
+| 4                 |       165.54     |     4.9    |     1,255       |
+| 8                 |       161.50     |   5.04      |    0,63        |
+| 12                |      200.88      |     4.05    |      0,33      |
 
 ---
 
