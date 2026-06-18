@@ -66,9 +66,9 @@ Após esses testes, realizados em máquinas com menos que 12 threads, foi realiz
 
 Teste serial:  320.92 segundos (5.35 minutos)<br>
 Teste 2 Threads: 154.78 segundos (2.58 minutos) <br>
-Teste 4 Threads: <br>
-Teste 8 Threads: <br> 
-Teste 12 Threads: <br> 
+Teste 4 Threads: 103.75 segundos (1.73 minutos) <br>
+Teste 8 Threads: 90.41 segundos (1.51 minutos) <br> 
+Teste 12 Threads: 91.76 segundos (1.53 minutos) <br> 
 
 
 
