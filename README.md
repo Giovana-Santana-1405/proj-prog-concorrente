@@ -64,7 +64,7 @@ Cada execução de paralelismo foi executada uma vez. O tempo serial foi executa
 
 Após esses testes, realizados em máquinas com menos que 12 threads, foi realizada uma nova leva de testes, em um dispositivo mais potente, com 12 threads e 20 processadores lógicos. 
 
-Teste serial: 
+Teste serial:  320.92 segundos
 
 
 
@@ -74,7 +74,7 @@ Teste serial:
 
 | Nº Threads/Processos | Tempo de Execução (s) |
 | -------------------- | --------------------- |
-| 1                    |           814.21            |
+| 1                    |           320.92           |
 | 2                    |           172.85           |
 | 4                    |              165.54         |
 | 8                    |            161.50            |
