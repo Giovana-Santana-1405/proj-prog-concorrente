@@ -19,9 +19,9 @@ Informar as características do hardware e software utilizados na execução dos
 
 | Item                        | Descrição |
 | --------------------------- | --------- |
-| Processador                 |   13th Gen Intel(R) Core(TM) i5-1334U       |
-| Número de núcleos           |      10    |
-| Memória RAM                 |      8GB     |
+| Processador                 |  12th Gen Intel(R) Core(TM) i7-12700       |
+| Número de núcleos           |      12   |
+| Memória RAM                 |      8GB    |
 | Sistema Operacional         |     Window 11     |
 | Linguagem utilizada         |     Python      |
 | Biblioteca de paralelização |      concurrent.future    |
@@ -62,10 +62,11 @@ Notou-se que o tempo paralelo de 12 threads foi pior que o resto dos tempos para
 
 Cada execução de paralelismo foi executada uma vez. O tempo serial foi executado duas vezes, levando em consideração o tempo maior. Houve uma diferença de 213,54 segundos entre a primeira e segunda execução. A primeira execução foi mais rápida que a segunda. A diferença foi a máquina utilizada e a quantidade de aplicativos externos abertos. 
 
+Após esses testes, realizados em máquinas com menos que 12 threads, foi realizada uma nova leva de testes, em um dispositivo mais potente, com 12 threads e 20 processadores lógicos. 
+
+Teste serial: 
 
 
-
-Todos os testes, a partir do teste 2, foram executados no mesmo dispositivo, sem alteraçoes no processamento geral. 
 
 
 ## Orientações
