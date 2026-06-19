@@ -67,11 +67,7 @@ with open("US_Accidents_March23.csv", "r", encoding="utf-8") as arquivo:
             else:
                 madrugada += 1
 
-            # ==========================================
-            # CARGA COMPUTACIONAL EXTRA
-            # aumenta o tempo serial
-            # ==========================================
-
+           
             for i in range(100):
 
                 texto = str(hora) * 100

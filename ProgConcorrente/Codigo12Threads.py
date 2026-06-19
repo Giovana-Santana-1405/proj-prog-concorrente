@@ -65,8 +65,8 @@ def main():
             futuros = []
             linhas_temporarias = []
             
-            # 10k por thread acumula 120k linhas totais antes de disparar o lote para as 12 threads
-            TAMANHO_LOTE_POR_THREAD = 10000 
+            # 50 por thread acumula 600 linhas totais antes de disparar o lote para as 12 threads
+            TAMANHO_LOTE_POR_THREAD = 1000
             TAMANHO_LOTE_TOTAL = TAMANHO_LOTE_POR_THREAD * qtd_threads
             id_tarefa = 1
 
@@ -75,7 +75,7 @@ def main():
                 total_linhas_lidas += 1
 
                 if total_linhas_lidas % 100000 == 0:
-                    print(f"📖 [Leitor] Já leu {total_linhas_lidas} linhas do arquivo CSV...", flush=True)
+                    print(f" [Leitor] Já leu {total_linhas_lidas} linhas do arquivo CSV...", flush=True)
 
                 if len(linhas_temporarias) >= TAMANHO_LOTE_TOTAL:
                     for i in range(qtd_threads):
@@ -92,7 +92,7 @@ def main():
                     if fatia:
                         futuros.append(executor.submit(processar_linhas, fatia, indice_hora, id_tarefa))
 
-            print("\n⏳ Leitura concluída! Aguardando as threads terminarem de processar os últimos lotes...")
+            print("\n Leitura concluída! Aguardando as threads terminarem de processar os últimos lotes...")
 
             for futuro in futuros:
                 horarios_local, m, t, n, md, l_fatia = futuro.result()

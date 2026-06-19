@@ -48,7 +48,7 @@ def main():
     inicio = time.perf_counter()
 
     # Altere aqui para 2, 4, 8 e 12 nos seus testes
-    qtd_threads = 4  
+    qtd_threads = 4 
 
     horarios = {}
     total_manha = total_tarde = total_noite = total_madrugada = 0
@@ -67,7 +67,7 @@ def main():
             
             # Tamanho do lote menor (25k por thread = 100k total por envio)
             # Isso evita o engarrafamento de dados que tínhamos antes!
-            TAMANHO_LOTE_POR_THREAD = 25000
+            TAMANHO_LOTE_POR_THREAD = 2500
             TAMANHO_LOTE_TOTAL = TAMANHO_LOTE_POR_THREAD * qtd_threads
             id_tarefa = 1
 

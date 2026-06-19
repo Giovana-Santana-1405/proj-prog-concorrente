@@ -41,14 +41,14 @@ def processar_linhas(linhas_chunk, indice_hora, id_thread):
 
 
 # ==========================================
-# FUNÇÃO PRINCIPAL (CONFIGURADA PARA 8 THREADS)
+# FUNÇÃO PRINCIPAL (LEITURA EM TEMPO REAL)
 # ==========================================
 def main():
     print("Iniciando o programa...\n")
     inicio = time.perf_counter()
 
-    # CONFIGURAÇÃO DE 8 THREADS
-    qtd_threads = 8  
+    # Altere aqui para 2, 4, 8 e 12 nos seus testes
+    qtd_threads = 8 
 
     horarios = {}
     total_manha = total_tarde = total_noite = total_madrugada = 0
@@ -65,8 +65,9 @@ def main():
             futuros = []
             linhas_temporarias = []
             
-            # AJUSTADO: Reduzido de 25000 para 10000 para evitar gargalo de memória/IPC
-            TAMANHO_LOTE_POR_THREAD = 10000 
+            # Tamanho do lote menor (25k por thread = 100k total por envio)
+            # Isso evita o engarrafamento de dados que tínhamos antes!
+            TAMANHO_LOTE_POR_THREAD = 100000
             TAMANHO_LOTE_TOTAL = TAMANHO_LOTE_POR_THREAD * qtd_threads
             id_tarefa = 1
 
@@ -74,19 +75,23 @@ def main():
                 linhas_temporarias.append(linha)
                 total_linhas_lidas += 1
 
+                # EXATAMENTE IGUAL AO SEU PRIMEIRO CÓDIGO:
+                # Printa em tempo real na tela enquanto lê do HD
                 if total_linhas_lidas % 100000 == 0:
-                    print(f"📖 [Leitor] Já leu {total_linhas_lidas} linhas do arquivo CSV...", flush=True)
+                    print(f"📖 [Leitor] Já leu {total_linhas_lidas} linhas do arquivo CSV...")
 
+                # Quando acumula o lote total, divide e envia imediatamente de forma assíncrona
                 if len(linhas_temporarias) >= TAMANHO_LOTE_TOTAL:
                     for i in range(qtd_threads):
                         fatia = linhas_temporarias[i * TAMANHO_LOTE_POR_THREAD : (i + 1) * TAMANHO_LOTE_POR_THREAD]
                         futuros.append(executor.submit(processar_linhas, fatia, indice_hora, id_tarefa))
                         id_tarefa += 1
                     
-                    linhas_temporarias = [] 
+                    linhas_temporarias = [] # Limpa a memória para as próximas linhas
 
-            if linhas_restantes := len(linhas_temporarias):
-                tamanho_fatia = max(1, linhas_restantes // qtd_threads)
+            # Envia o que sobrou no final do arquivo (se houver)
+            if lines_restantes := len(linhas_temporarias):
+                tamanho_fatia = max(1, lines_restantes // qtd_threads)
                 for i in range(qtd_threads):
                     fatia = linhas_temporarias[i * tamanho_fatia : (i + 1) * tamanho_fatia] if i < qtd_threads - 1 else linhas_temporarias[i * tamanho_fatia:]
                     if fatia:
@@ -94,8 +99,9 @@ def main():
 
             print("\n⏳ Leitura concluída! Aguardando as threads terminarem de processar os últimos lotes...")
 
+            # Recolhe e consolida os resultados conforme eles terminam
             for futuro in futuros:
-                horarios_local, m, t, n, md, l_fatia = futuro.result()
+                horarios_local, m, t, n, md, _ = futuro.result()
                 
                 total_manha += m
                 total_tarde += t
@@ -105,6 +111,9 @@ def main():
                 for hora, qtd in horarios_local.items():
                     horarios[hora] = horarios.get(hora, 0) + qtd
 
+    # ==========================================
+    # FIM DO TEMPO PARALELO E RESULTADOS
+    # ==========================================
     fim = time.perf_counter()
     tempo_segundos = fim - inicio
     tempo_minutos = tempo_segundos / 60
