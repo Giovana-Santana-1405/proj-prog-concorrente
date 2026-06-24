@@ -97,10 +97,10 @@ Onde:
 * **T(1)** = tempo da execução serial
 * **T(p)** = tempo com p threads/processos
 
-  Speedup utilizando 2 threads: 4,7<br>
-  Speedup utilizando 4 threads: 4,9<br>
-  Speedup utilizando 8 threads: 5,04<br>
-  Speedup utilizando 12 threads:4,05<br>
+  Speedup utilizando 2 threads: 2,30<br>
+  Speedup utilizando 4 threads: 4,71<br>
+  Speedup utilizando 8 threads: 7,86<br>
+  Speedup utilizando 12 threads:9,17<br>
 
 ### Eficiência
 
@@ -121,10 +121,10 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 | Threads/Processos | Tempo (s) | Speedup | Eficiência |
 | ----------------- | --------- | ------- | ---------- |
 | 1                 |     814.21     | 1.0     | 1.0        |
-| 2                 |       172.85     |     4.7    |   2,35         |
-| 4                 |       165.54     |     4.9    |     1,255       |
-| 8                 |       161.50     |   5.04      |    0,63        |
-| 12                |      200.88      |     4.05    |      0,33      |
+| 2                 |       172.85     |     2,30    |   115%         |
+| 4                 |       165.54     |     4.71    |     117%       |
+| 8                 |       161.50     |   7,86    |    98%        |
+| 12                |      200.88      |     9,17    |      76%      |
 
 ---
 
