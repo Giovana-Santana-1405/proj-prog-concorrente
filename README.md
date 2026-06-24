@@ -100,7 +100,7 @@ Onde:
   Speedup utilizando 2 threads: 2,30<br>
   Speedup utilizando 4 threads: 4,71<br>
   Speedup utilizando 8 threads: 7,86<br>
-  Speedup utilizando 12 threads:9,17<br>
+  Speedup utilizando 12 threads: 9,17<br>
 
 ### Eficiência
 
@@ -121,10 +121,10 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 | Threads/Processos | Tempo (s) | Speedup | Eficiência |
 | ----------------- | --------- | ------- | ---------- |
 | 1                 |     814.21     | 1.0     | 1.0        |
-| 2                 |       172.85     |     2,30    |   115%         |
-| 4                 |       165.54     |     4.71    |     117%       |
-| 8                 |       161.50     |   7,86    |    98%        |
-| 12                |      200.88      |     9,17    |      76%      |
+| 2                 |       172.85     |     2,30    |   1,15         |
+| 4                 |       165.54     |     4.71    |     1,17      |
+| 8                 |       161.50     |   7,86    |    0,98        |
+| 12                |      200.88      |     9,17    |      0,76     |
 
 ---
 
