@@ -31,38 +31,34 @@ Informar as características do hardware e software utilizados na execução dos
 
 # 3. Metodologia de Testes
 
-Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. Foram realizadas 2 execuções falhas e 2 execuções com sucesso. <br>
+Inicialmente, o teste do tempo Serial foi realizado com um código funcional, porém falho para o objetivo do trabalho. O código lia diversas linhas de uma vez só e o código se encerrava muito rápido. Após analises e alterações, o código passou a ler 100000 linhas por vez, trazendo um tempo serial que pode ser utilizado. <br>
+Após isso, foram realizados testes, já aplicando o paralelismo <br>
+
 Teste 1 - <br>
-Tempo serial : 600.67 segundos (10.01 minutos) <br>
-Aplicações extras abertas: Não <br>
-<br>
-Teste 2 - <br>
 Tempo serial: 814,21 segundos (13.57 minutos) <br>
 Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
 <br>
-Teste 3 - <br>
+Teste 2 - <br>
 Tempo paralelo (2 Threads): 172.85 segundos (2.88 minutos)  <br>
 Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
 <br>
-Teste 4 - <br>
+Teste 3 - <br>
 Tempo paralelo(4 threads): 165.54 segundos (2.76 minutos) <br>
 Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
 <br>
- Teste 5 - <br>
+ Teste 4 - <br>
 Tempo paralelo(8 threads): 161.50 segundos (2.69 minutos)  <br>
 Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
 <br>
 
-Teste 6 - <br>
+Teste 5 - <br>
 Tempo paralelo(12 threads): 200.88 segundos (3.35 minutos) <br>
 Aplicações extras abertas: Spotify, Google Chrome (2 guias)  <br>
 <br>
 
 Notou-se que o tempo paralelo de 12 threads foi pior que o resto dos tempos paralelos, pois a máquina onde foram realizadas os testes tinham apenas 10 núcleos no processador. Por isso, ocorreu overhead, onde o sistema tenta gerenciar 12 threads, tendo apenas 10 disponíveis. 
 
-Cada execução de paralelismo foi executada uma vez. O tempo serial foi executado duas vezes, levando em consideração o tempo maior. Houve uma diferença de 213,54 segundos entre a primeira e segunda execução. A primeira execução foi mais rápida que a segunda. A diferença foi a máquina utilizada e a quantidade de aplicativos externos abertos. 
-
-Após esses testes, realizados em máquinas com menos que 12 threads, foi realizada uma nova leva de testes, em um dispositivo mais potente, com 12 threads e 20 processadores lógicos. 
+Cada execução foi realizada uma vez, considerando inicialmente o tempo único, porém por conta da potência inferior da máquina em relação ao objetivo do projeto, foram realizadas novas levas de testes, em um máquina mais potente. Os primeiros testes realizados foram descartados, pois, por conta de alguns gargalos o código não estava alcançando o redução de tempo ideal. Houveram adaptações no código e finalmente chegamos no resultado final: <br>
 
 Teste serial:  273.841 segundos (4.56 minutos)<br>
 Teste 2 Threads: 118.60 segundos (1.98 minuto) <br>
@@ -78,11 +74,11 @@ Teste 12 Threads: 29.85 segundos (1.53 minutos) <br>
 
 | Nº Threads/Processos | Tempo de Execução (s) |
 | -------------------- | --------------------- |
-| 1                    |           320.92           |
-| 2                    |           154.78           |
-| 4                    |              165.54         |
-| 8                    |            161.50            |
-| 12                   |           200.88            |
+| 1                    |           273.841          |
+| 2                    |           118.60           |
+| 4                    |              58.11         |
+| 8                    |            34.81            |
+| 12                   |           29.85            |
 
 ---
 
