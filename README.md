@@ -60,11 +60,11 @@ Notou-se que o tempo paralelo de 12 threads foi pior que o resto dos tempos para
 
 Cada execução foi realizada uma vez, considerando inicialmente o tempo único, porém por conta da potência inferior da máquina em relação ao objetivo do projeto, foram realizadas novas levas de testes, em um máquina mais potente. Os primeiros testes realizados foram descartados, pois, por conta de alguns gargalos o código não estava alcançando o redução de tempo ideal. Houveram adaptações no código e finalmente chegamos no resultado final: <br>
 
-Teste serial:  273.841 segundos (4.56 minutos)<br>
-Teste 2 Threads: 118.60 segundos (1.98 minuto) <br>
-Teste 4 Threads: 58.11 segundos <br>
-Teste 8 Threads: 34.81 segundos <br> 
-Teste 12 Threads: 29.85 segundos (1.53 minutos) <br> 
+Teste serial:  273.841 segundos (4.56 minutos)<br> <br>
+Teste 2 Threads: 118.60 segundos (1.98 minuto) <br> <br>
+Teste 4 Threads: 58.11 segundos <br> <br>
+Teste 8 Threads: 34.81 segundos <br> <br>
+Teste 12 Threads: 29.85 segundos (1.53 minutos) <br> <br> 
 
 
 
