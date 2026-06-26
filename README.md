@@ -145,4 +145,10 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 
 # 10. Análise dos Resultados
 
-Após a análise dos
+Após a análise dos resultados, percebeu-se que o tempo de execução caiu consideravelmente. Passando de um tempo serial de 273,841 segundos para um tempo paralelizado utilizando 12 processos de 29,85 segundos. Inicialmente, o tempo de execução foi reduzido próximo ao esperado. Mas quando foi implementado o código com 12 processos, foi analizado que o tempo caiu aproximadamente 5 segundos, um tempo mais distante do ideal. Também foram analisados os gráficos de SpeedUp e eficiência.
+
+Na análise do SpeedUp do sistema foi concluído que, até 8 processos, o ganho de SpeedUp ficou bem próximo do ideal, com 2 e 4 processos chegando a ultrapassar a taxa ideal, causando um SpeedUp superlinear, porém, quando aplicamos 12 processos simultâneos, pode-se perceber que ocorre uma queda drástica no SpeedUp, trazendo um resultado consideravelmente distante do ideal. 
+
+Na análise de eficiência, foi constatado que, com 2 e 4 processos, ocorreu um ganho alto de eficiência, com os resultados em 115% e 117%, bem acima do esperado. Com 8 processos, a eficiência foi de 98%, um pouco abaixo, porém ainda dentro do ideal. Já com 12 processos, a eficiência cai para 76%, um numéro ainda dentro do padrão, porém não tão convincente quanto os outros. 
+
+Depois de uma análise completa desses gráficos, foi constado que a melhor saída para o sistema é utilizar o paralelismo com 8 processos, pois, quando chegamos em 12 processos, a eficiência cai consideravelmente e não ocorre um ganho de tempo muito elevado, portanto, a utilização de 8 processos pode ser um pouco mais lenta, porém, mais eficiente, então, não vale a pena sacrificar tanta eficiência do projeto por 5 segundos de diferença no tempo de execução
