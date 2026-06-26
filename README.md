@@ -25,7 +25,7 @@ Informar as características do hardware e software utilizados na execução dos
 | Sistema Operacional         |     Window 11     |
 | Linguagem utilizada         |     Python      |
 | Biblioteca de paralelização |      concurrent.future    |
-| Compilador / Versão         |      Python 3.14     |
+| Compilador / Versão         |      VSCODE    |
 
 ---
 
