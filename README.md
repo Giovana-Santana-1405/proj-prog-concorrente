@@ -130,21 +130,19 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 
 # 7. Gráfico de Tempo de Execução
 
-## A inserir
+<img width="600" height="371" alt="Tempo de Execução" src="https://github.com/user-attachments/assets/bb242c36-bd11-43b2-aa86-6e42b2fe6dbc" />
 
 
 # 8. Gráfico de Speedup
 
-## A inserir
+<img width="1600" height="870" alt="Speedup" src="https://github.com/user-attachments/assets/ab94fdf8-2614-47df-aee2-8952163f8bbe" />
+
 
 # 9. Gráfico de Eficiência
 
-## A inserir
+<img width="438" height="276" alt="Eficiencia" src="https://github.com/user-attachments/assets/914592b2-a324-484a-a767-f4482b3dcb3b" />
+
 
 # 10. Análise dos Resultados
 
-## A inserir 
-
-# 11. Conclusão
-
-## A inserir 
+Após a análise dos
