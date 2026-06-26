@@ -145,6 +145,48 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 
 # 10. Análise dos Resultados
 
+
+===== ACIDENTES POR HORÁRIO =====
+
+0h -> 112378 acidentes
+1h -> 97071 acidentes
+2h -> 93227 acidentes
+3h -> 83863 acidentes
+4h -> 159852 acidentes
+5h -> 228182 acidentes
+6h -> 405837 acidentes
+7h -> 587472 acidentes
+8h -> 577576 acidentes
+9h -> 363034 acidentes
+10h -> 342706 acidentes
+11h -> 355040 acidentes
+12h -> 355001 acidentes
+13h -> 396445 acidentes
+14h -> 448846 acidentes
+15h -> 525855 acidentes
+16h -> 581969 acidentes
+17h -> 576015 acidentes
+18h -> 432042 acidentes
+19h -> 295121 acidentes
+20h -> 225226 acidentes
+21h -> 191452 acidentes
+22h -> 167645 acidentes
+23h -> 126539 acidentes
+
+===================================
+Horário com mais acidentes: 7h
+Quantidade: 587472 acidentes
+===================================
+
+===== PERÍODOS DO DIA =====
+Manhã: 2631665
+Tarde: 2884131
+Noite: 1438025
+Madrugada: 774573
+
+Total de linhas analisadas: 7728394
+
+
 Após a análise dos resultados, percebeu-se que o tempo de execução caiu consideravelmente. Passando de um tempo serial de 273,841 segundos para um tempo paralelizado utilizando 12 processos de 29,85 segundos. Inicialmente, o tempo de execução foi reduzido próximo ao esperado. Mas quando foi implementado o código com 12 processos, foi analizado que o tempo caiu aproximadamente 5 segundos, um tempo mais distante do ideal. Também foram analisados os gráficos de SpeedUp e eficiência.
 
 Na análise do SpeedUp do sistema foi concluído que, até 8 processos, o ganho de SpeedUp ficou bem próximo do ideal, com 2 e 4 processos chegando a ultrapassar a taxa ideal, causando um SpeedUp superlinear, porém, quando aplicamos 12 processos simultâneos, pode-se perceber que ocorre uma queda drástica no SpeedUp, trazendo um resultado consideravelmente distante do ideal. 
