@@ -146,45 +146,44 @@ Preencha a tabela abaixo utilizando os tempos medidos.
 # 10. Análise dos Resultados
 
 
-===== ACIDENTES POR HORÁRIO =====
+===== ACIDENTES POR HORÁRIO ===== <br>
 
-0h -> 112378 acidentes
-1h -> 97071 acidentes
-2h -> 93227 acidentes
-3h -> 83863 acidentes
-4h -> 159852 acidentes
-5h -> 228182 acidentes
-6h -> 405837 acidentes
-7h -> 587472 acidentes
-8h -> 577576 acidentes
-9h -> 363034 acidentes
-10h -> 342706 acidentes
-11h -> 355040 acidentes
-12h -> 355001 acidentes
-13h -> 396445 acidentes
-14h -> 448846 acidentes
-15h -> 525855 acidentes
-16h -> 581969 acidentes
-17h -> 576015 acidentes
-18h -> 432042 acidentes
-19h -> 295121 acidentes
-20h -> 225226 acidentes
-21h -> 191452 acidentes
-22h -> 167645 acidentes
-23h -> 126539 acidentes
+0h -> 112378 acidentes<br>
+1h -> 97071 acidentes<br>
+2h -> 93227 acidentes<br>
+3h -> 83863 acidentes<br>
+4h -> 159852 acidentes<br>
+5h -> 228182 acidentes<br>
+6h -> 405837 acidentes<br>
+7h -> 587472 acidentes<br>
+8h -> 577576 acidentes<br>
+9h -> 363034 acidentes<br>
+10h -> 342706 acidentes<br>
+11h -> 355040 acidentes<br>
+12h -> 355001 acidentes<br>
+13h -> 396445 acidentes<br>
+14h -> 448846 acidentes<br>
+15h -> 525855 acidentes<br>
+16h -> 581969 acidentes<br>
+17h -> 576015 acidentes<br>
+18h -> 432042 acidentes<br>
+19h -> 295121 acidentes<br>
+20h -> 225226 acidentes<br>
+21h -> 191452 acidentes<br>
+22h -> 167645 acidentes<br>
+23h -> 126539 acidentes<br>
 
-===================================
-Horário com mais acidentes: 7h
-Quantidade: 587472 acidentes
-===================================
 
-===== PERÍODOS DO DIA =====
-Manhã: 2631665
-Tarde: 2884131
-Noite: 1438025
-Madrugada: 774573
+Horário com mais acidentes: 7h<br>
+Quantidade: 587472 acidentes<br>
 
-Total de linhas analisadas: 7728394
+
+===== PERÍODOS DO DIA =====<br>
+Manhã: 2631665<br>
+Tarde: 2884131<br>
+Noite: 1438025<br>
+Madrugada: 774573<br>
+
 
 
 Após a análise dos resultados, percebeu-se que o tempo de execução caiu consideravelmente. Passando de um tempo serial de 273,841 segundos para um tempo paralelizado utilizando 12 processos de 29,85 segundos. Inicialmente, o tempo de execução foi reduzido próximo ao esperado. Mas quando foi implementado o código com 12 processos, foi analizado que o tempo caiu aproximadamente 5 segundos, um tempo mais distante do ideal. Também foram analisados os gráficos de SpeedUp e eficiência.
